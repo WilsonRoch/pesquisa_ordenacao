@@ -1,5 +1,17 @@
 # Plano de aula
 
+## Aula Semana 10
+    - Fazer uma função que retorne True se a lista está em heap máximo
+    - Fazer um programa que:
+        - armazene milhoes de números inteiros ou pouco repetidos (desordenados)
+        - localize o menor número gerado
+        - retorne o número
+        - temporize esse processamento
+        - contabilize o número de comparações
+
+    - Pesquisa sequencial e pesquisa binária
+    - Pesquisa digital
+
 ## Aula Semana 9
     - Discussão sobre a prova
     - Heapsort
