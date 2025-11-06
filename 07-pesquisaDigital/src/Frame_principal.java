@@ -32,9 +32,11 @@ public class Frame_principal extends javax.swing.JFrame {
         jTextField_frasePesquisa = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jTextField_localizados = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jTextArea_texto.setEditable(false);
         jTextArea_texto.setColumns(20);
         jTextArea_texto.setRows(5);
         jTextArea_texto.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -57,6 +59,8 @@ public class Frame_principal extends javax.swing.JFrame {
         jTextField_localizados.setEditable(false);
         jTextField_localizados.setText("0");
 
+        jTextField1.setText("jTextField1");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -64,7 +68,7 @@ public class Frame_principal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 521, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel1)
@@ -72,13 +76,16 @@ public class Frame_principal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField_frasePesquisa)
-                            .addComponent(jTextField_localizados))))
+                            .addComponent(jTextField_localizados)
+                            .addComponent(jTextField1))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(152, Short.MAX_VALUE)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jTextField_frasePesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -96,19 +103,19 @@ public class Frame_principal extends javax.swing.JFrame {
     private void jTextField_frasePesquisaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_frasePesquisaKeyReleased
         String frase = jTextField_frasePesquisa.getText();
         contador = 0;
-       jTextArea_texto.setText(areaDeTexto.toString());
+        jTextArea_texto.setText(areaDeTexto.toString());
         String sequencia;
         for (int i = 0; !frase.equals("") && i <= areaDeTexto.length() - frase.length(); i++) {
             sequencia = areaDeTexto.substring(i, i + frase.length());
-            if (frase.equalsIgnoreCase(sequencia)){
+            if (frase.equalsIgnoreCase(sequencia)) {
                 contador++;
-                System.out.println(ANSI_YELLOW
-                           + frase
-                           + ANSI_RESET);
+//                System.out.println(ANSI_YELLOW
+//                        + frase
+//                        + ANSI_RESET);
                 jTextArea_texto.replaceRange(frase.toUpperCase(), i, i + frase.length());
             }
         }
-        jTextField_localizados.setText(""+contador);
+        jTextField_localizados.setText("" + contador);
     }//GEN-LAST:event_jTextField_frasePesquisaKeyReleased
 
     private void jTextArea_textoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextArea_textoKeyReleased
@@ -150,7 +157,7 @@ public class Frame_principal extends javax.swing.JFrame {
             }
         });
     }
-    
+
     StringBuilder areaDeTexto = new StringBuilder();
     int contador = 0;
     public static final String ANSI_YELLOW = "\u001B[43m";
@@ -161,6 +168,7 @@ public class Frame_principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea_texto;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField_frasePesquisa;
     private javax.swing.JTextField jTextField_localizados;
     // End of variables declaration//GEN-END:variables
