@@ -38,13 +38,4 @@ public class Sessao {
             return false;
         return true;
     }
-
-    public static Sessao pegar(HashSet<Sessao> sessoes, Sessao chave) {
-        for (Sessao s : sessoes) {
-            if (s.equals(chave)) {
-                return s;
-            }
-        }
-        return null;
-    }
 }
