@@ -13,8 +13,8 @@
         
         2) Construa um programa em modo texto (ou gráfico em Java se preferir), orientado a objetos que:
             a) carregue a base de informações das sessões de telefones (telephony_sessions.txt)
-            b) armazene essa base em uma estrutura de dados do tipo HashSet
-            c) cada par, número do celular (string) e dados da sessão (string), deve ser convertido em um objeto a ser armazenado no HashSet, sendo que o número do celular é a chave para o cálculo de endereçamento
+            b) armazene essa base em uma estrutura de dados do tipo HashMap
+            c) cada par, número do celular (string) e dados da sessão (string), deve ser convertido em um objeto e dicionário a ser armazenado no HashMap, sendo que o número do celular é a chave para o cálculo de endereçamento
             d) tenha uma funcionalidade em que o usuário entra com o número de celular e o programa retorna a string contendo todos os dados da sessão.
         3) Construa um menu para atender a demanda
 
